@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+:root {
+  --paper: #efe9dc;
+  --paper-deep: #e6dfcd;
+  --ink: #14213d;
+  --ink-soft: #4b5773;
+  --grid-line: rgba(20, 33, 61, 0.09);
+  --grid-line-strong: rgba(20, 33, 61, 0.16);
+  --highlight: #d4a017;
+  --highlight-soft: rgba(212, 160, 23, 0.18);
+  --teal: #2e6f6e;
+  --rust: #a34c3f;
+  --card-bg: #f7f3e8;
+
+  --font-display: Georgia, "Iowan Old Style", "Palatino Linotype", "Book Antiqua", serif;
+  --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, Helvetica, Arial, sans-serif;
+  --font-data: "IBM Plex Mono", "SFMono-Regular", Menlo, Consolas, "Liberation Mono", monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-color: var(--paper);
+  background-image:
+    linear-gradient(var(--grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px),
+    linear-gradient(var(--grid-line-strong) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-line-strong) 1px, transparent 1px);
+  background-size: 16px 16px, 16px 16px, 80px 80px, 80px 80px;
+  color: var(--ink);
+  font-family: var(--font-body), sans-serif;
+}
+
+.font-display {
+  font-family: var(--font-display), serif;
+}
+
+.font-data {
+  font-family: var(--font-data), monospace;
+}
+
+::selection {
+  background: var(--highlight-soft);
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+:focus-visible {
+  outline: 2px solid var(--teal);
+  outline-offset: 2px;
+}
